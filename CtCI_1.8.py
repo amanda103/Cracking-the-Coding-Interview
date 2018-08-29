@@ -19,8 +19,6 @@ def zeros(mat):
             if i in row_to_z:
                 r[j] = 0
 
-    return mat
-
 
 my_mat = [[0,0,1],
           [1,1,1],
@@ -28,12 +26,12 @@ my_mat = [[0,0,1],
           [1,1,1],
           [0,1,1]]
 
-# print(zeros(my_mat))
+print(zeros(my_mat))
 
 
 class Test(unittest.TestCase):
 
-  def zeros(self):
+  def zeros_test(self):
     mat1 = [[1,1,1,1,1],[1,0,1,1,1],[1,1,1,1,1],[1,1,1,0,1],[2,3,4,5,6]]
     mat2 = [[1,0,1,0,1],[0,0,0,0,0],[1,0,1,0,1],[0,0,0,0,0],[2,0,4,0,6]]
     zeros(mat1)
@@ -41,3 +39,6 @@ class Test(unittest.TestCase):
 
 if __name__ == "__main__":
   unittest.main()
+
+
+  # TODO: fail fast, check if matrix exists
